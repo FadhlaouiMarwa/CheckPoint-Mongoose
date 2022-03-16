@@ -32,8 +32,8 @@ router.post("/",async(req,res)=>{
 )
 
 //Description: Get
-//path:http://localhost:5000/api/contacts/all
-router.get("/all",async(req,res)=>{
+//path:http://localhost:5000/api/contacts/
+router.get("/",async(req,res)=>{
     try {
         const contactList=await Contact.find()
         return res.status(200).send({msg:"Voilà notre liste", contactList})
