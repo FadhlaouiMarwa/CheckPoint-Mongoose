@@ -1,6 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
-import ContactList from './components/ContactList';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import Add from './pages/Add';
@@ -12,7 +12,11 @@ function App() {
   return (
     <div className="App">
       <Navigation/>
-      <h1>MERN Workshop</h1>
+      <h2>MERN Workshop</h2>
+      <div style={{display:"flex",justifyContent:"space-around"}}>
+      <Link to={"/add"}><Button style={{width:250,height:50}}>Ajouter un contact</Button></Link>
+      <Link to={"/"}><Button style={{width:250,height:50}}>Home</Button></Link>
+      </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/add" element={<Add/>}/>

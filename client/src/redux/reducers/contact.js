@@ -17,7 +17,7 @@ const contactReducer=(state=initiale,{type,payload})=>
         case LOAD_CONTACTS:
             return{...state,load:true};
         case GET_CONTACTS:
-            return{...state,load:false,contactList:ContactList.payload};
+            return{...state,load:false,contactList:payload.contactList};
         case FAIL_CONTACTS:
             return {...state,load:false,error:payload};
         default:
